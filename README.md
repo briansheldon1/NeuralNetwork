@@ -41,6 +41,7 @@ The game was developed using HTML5 Canvas, which provides basic functionalities 
 4. **Model Tests**:  
    - **XOR TEST**: The first test I applied to a model was in solving the XOR problem. The XOR problem involves determing an output based on if two inputs are different (OR AND NAND). Linear models can't solve it because a single line can't separate the categories in the input space. Using a non-linear model with my custom Network class achieved 100% accuracy
    - **MNIST TEST**: The second test was on the MNIST dataset, a classic machine learning dataset consisting of handwritten digits (0-9). The dataset was downloaded from Kaggle and loaded with Kaggle resources (Ref4). I set up my model with two hidden layers of 32 and 16 nodes. After 200 epochs the model achieved 94.6% accuracy on the test set. 
+   ![plots/mnist_confmatrix.png](plots/mnist_confmatrix.png)
 
 <br>
 
@@ -61,7 +62,7 @@ This repository is not meant to compete with libraries such as PyTorch or Scikit
 - Similarly you can load a model using ```Network.load_model(load_path: string)```
 5. **Testing the Model**:
 - One option for testing the accuracy is ```Network.test_accuracy(X_test, y_test)``` which will output the percent of training examples the model got correct. This was used in the XOR testing
-- For the mnist dataset a confusion matrix was used (see ![plots/mnist_confmatrix.png](plots/mnist_confmatrix.png)) which was created using confusion_matrix_plot from ![src/util.py](src/util.py)
+- For the mnist dataset a confusion matrix was used (see ![plots](plots)) which was created using confusion_matrix_plot from ![src/util.py](src/util.py)
 
 
 # Reflection
