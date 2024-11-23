@@ -64,9 +64,10 @@ This repository is not meant to compete with libraries such as PyTorch or Scikit
 - One option for testing the accuracy is ```Network.test_accuracy(X_test, y_test)``` which will output the percent of training examples the model got correct. This was used in the XOR testing
 - For the mnist dataset a confusion matrix was used (see ![plots](plots)) which was created using confusion_matrix_plot from ![src/util.py](src/util.py)
 
+</br>
 
 # Reflection
-This project wasn't about creating a repository to compete with frameworks like PyTorch or scikit-learn. My code is admittedly much slower and less flexible than most python ML libraries. However, I feel I have succeeded in my personal goal of gaining a deeper understanding of neural networks. Through wrangling the backpropogation equations into working algorithms and learning how to handle and update parameters,I've delved into the inner-workings of the most basic form of a neural network. That said, even though I have furthered my personal understanding, there's still something magical about watching these models learn and improve. 
+I feel I have succeeded in completing my personal goal of gaining a deeper understanding of neural networks. Through wrangling backpropogation equations into working algorithms and troubleshooting my model, I've delved into the inner-workings of the most basic form of a neural network. While my primary goal was to just understand backpropogation, I ended up learning about countless ways people improve model performances including momentum, optimizer functions, and activation functions. Even though I have somewhat demystified how neural networks work, there's still something magical in how these models learn and improve. 
 
 
 <br>
