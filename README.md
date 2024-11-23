@@ -54,20 +54,20 @@ This repository is not meant to compete with libraries such as PyTorch or Scikit
 - To create an instance of this class you should pass in 'layers', which is an array or tuple of layer sizes (including non-hidden layers)
 - For example, to build a model with 2 inputs, 1 output, and a single hidden layer of size 2 then I would instantiate my network with ```my_network = Network(layers=[2, 2, 1])```
 3. **Training Model**:
-- To see how models were trained see ![src/xor_main.py](src/xor_main.py) or ![src/mnist_main.py](src/mnist_main.py)
+- To see how models were trained check out ![src/xor_main.py](src/xor_main.py) or ![src/mnist_main.py](src/mnist_main.py)
 - To train the model first setup a np.array of inputs (X) and a np.array of outputs (y). You can use the train_test_split in ![src/util.py](src/util.py) to divide the samples into training and testing samples
 - To train the model you can run ```Network.fit(X_train, y_train)```. It is recommended to also set the kwargs of epochs, batch_size and verbose
 4. **Saving/Loading Model**:
 - To save a model you can utilize the ```Network.save_model(save_path: string)``` method which saves the model parameters in a pkl file to the given path.
 - Similarly you can load a model using ```Network.load_model(load_path: string)```
 5. **Testing the Model**:
-- One option for testing the accuracy is ```Network.test_accuracy(X_test, y_test)``` which will output the percent of training examples the model got correct. This was used in the XOR testing
-- For the mnist dataset a confusion matrix was used (see ![plots](plots)) which was created using confusion_matrix_plot from ![src/util.py](src/util.py)
+- One option for testing the accuracy is ```Network.test_accuracy(X_test, y_test)``` which will output the percent of testing examples that the model correctly predicted.
+- For the mnist dataset a confusion matrix was also used (see ![plots](plots)) which was created using confusion_matrix_plot from ![src/util.py](src/util.py)
 
 </br>
 
 # Reflection
-I feel I have succeeded in completing my personal goal of gaining a deeper understanding of neural networks. Through wrangling backpropogation equations into working algorithms and troubleshooting my model, I've delved into the inner-workings of the most basic form of a neural network. While my primary goal was to just understand backpropogation, I ended up learning about countless ways people improve model performances including momentum, optimizer functions, and activation functions. Even though I have somewhat demystified how neural networks work, there's still something magical in how these models learn and improve. 
+I feel I have succeeded in completing my personal goal of gaining a deeper understanding of neural networks. Through wrangling backpropogation equations into working algorithms and troubleshooting my model, I've delved into the inner-workings of the most basic form of a neural network. While my main goal was to understand backpropogation, I ended up learning about the importance of countless other topics such as momentum, optimizers, and activation functions. Even though I have somewhat demystified neural networks for myself, I still find it magical watching them learn and improve. 
 
 
 <br>
