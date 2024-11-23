@@ -10,7 +10,7 @@
 # Overview
 
 <p>
-This repository represents a personal project of coding a basic feedforward neural network from scratch in order to gain a deeper understanding for the inner-workings of machine learning libraries. While I aimed to avoid blindly copying code, I was also not trying to reinvent the wheel so began by heavily researching neural networks, backpropogation equations, and how others generally structure code for similar projects. 
+This repository represents a personal project of coding a basic feedforward neural network from scratch in order to gain a deeper understanding for the inner-workings of machine learning libraries. While I aimed to avoid blindly copying code, I was also not trying to reinvent the wheel so began by heavily researching neural networks, backpropogation equations, and how others generally structure code for similar projects. I also utilized numpy for quick array processing and linear algebra functionalities. 
 </p>
 
 <br>
