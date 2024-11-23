@@ -27,7 +27,7 @@ The primary goals for this project were:
 # Design and Development Process
 The game was developed using HTML5 Canvas, which provides basic functionalities for drawing to pixel locations on a canvas. Since it was made without a game engine, the object inputs, collision, and game UI had to be handled manually. The order that the project was   
 1. **Research**:  
-   - Initial research involved watching thoroughly through 3Blue1Brown's series on deeplearning (![see Ref3](References))
+   - Initial research involved watching thoroughly through 3Blue1Brown's series on deeplearning (![see Ref3](#References))
    - For learning general code structuring and organization for this project I utilized a similar approach as Ref2
    - For implementing backpropogation I first followed derivations of Ref1. The most challengin gpart was converting those component=wise equations into matrix notation and then into numpy calculations. 
 2. **Troubleshooting**:  
