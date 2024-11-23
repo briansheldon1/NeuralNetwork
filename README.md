@@ -38,10 +38,7 @@ The game was developed using HTML5 Canvas, which provides basic functionalities 
 3. **Finetuning and Fixes**:  
    - One of the most impactful improvements to the model was incorporating momentum. This adjustment made gradient descent less sensitive to local minima by having the descent behave more like a ball rolling downhill, smoothly landing in a deep minima
    - By this point the model would achieve high accuracy in most cases but occasionally would perform terribly. By logging the gradients, I identified the issue was caused by vanishing gradients. Switching to a leaky ReLU activation function resolved this, as its neurons would never fully 'die' but only become less impactful
-    <div style="margin-left:40px">
     [![images/relu.png](images/relu.png)](https://www.researchgate.net/figure/ReLU-activation-function-vs-LeakyReLU-activation-function_fig2_358306930)
-    <img src="images/relu.png">
-    </div>
 4. **Model Tests**:  
    - **XOR TEST**: The first test I applied to a model was in solving the XOR problem. The XOR problem involves determing an output based on if two inputs are different (OR AND NAND). Linear models can't solve it because a single line can't separate the categories in the input space. Using a non-linear model with my custom Network class achieved 100% accuracy
    - **MNIST TEST**: The second test was on the MNIST dataset, a classic machine learning dataset consisting of handwritten digits (0-9). The dataset was downloaded from Kaggle and loaded with Kaggle resources (Ref4). I set up my model with two hidden layers of 32 and 16 nodes. After 200 epochs the model achieved 94.6% accuracy on the test set. 
