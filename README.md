@@ -1,11 +1,12 @@
 # Neural Network
 *personal project of building a feedforward dense neural network using only numpy*
 
-
 <br>
 
-![https://www.geeksforgeeks.org/artificial-neural-networks-and-its-applications/](images/nn-img.png)
 
+[![images/nn-img.png](images/nn-img.png)](https://www.geeksforgeeks.org/artificial-neural-networks-and-its-applications/)
+
+<br>
 
 # Overview
 
@@ -38,8 +39,8 @@ The game was developed using HTML5 Canvas, which provides basic functionalities 
    - One of the most impactful improvements to the model was incorporating momentum. This adjustment made gradient descent less sensitive to local minima by having the descent behave more like a ball rolling downhill, smoothly landing in a deep minima
    - By this point the model would achieve high accuracy in most cases but occasionally would perform terribly. By logging the gradients, I identified the issue was caused by vanishing gradients. Switching to a leaky ReLU activation function resolved this, as its neurons would never fully 'die' but only become less impactful
     <div style="margin-left:40px">
+    [![images/relu.png](images/relu.png)](https://www.researchgate.net/figure/ReLU-activation-function-vs-LeakyReLU-activation-function_fig2_358306930)
     <img src="images/relu.png">
-    <p style="font-size:10px; font-style: italic; ">Image Reference 2</p>
     </div>
 4. **Model Tests**:  
    - **XOR TEST**: The first test I applied to a model was in solving the XOR problem. The XOR problem involves determing an output based on if two inputs are different (OR AND NAND). Linear models can't solve it because a single line can't separate the categories in the input space. Using a non-linear model with my custom Network class achieved 100% accuracy
