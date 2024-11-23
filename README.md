@@ -30,7 +30,7 @@ The game was developed using HTML5 Canvas, which provides basic functionalities 
 1. **Research**:  
    - Initial research involved watching thoroughly through 3Blue1Brown's series on deeplearning (see Ref3)
    - For learning general code structuring and organization for this project I utilized a similar approach as Ref2
-   - For implementing backpropogation I first followed derivations of Ref1. The most challengin gpart was converting those component=wise equations into matrix notation and then into numpy calculations. 
+   - For implementing backpropogation I first followed derivations of Ref1. The most challenging part was converting those component-wise equations into linear algebra algorithms
 2. **Troubleshooting**:  
    - The majority of the time on the project was spent debugging and troubleshooting errors
    - Some of the bugs included forgetting to add in bias during the feedforward, accidentally performing gradient ascent instead of descent, and forgetting to apply the activation function during the feedforward
