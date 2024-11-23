@@ -4,8 +4,8 @@
 
 <br>
 
-<img src="images/nn-img.png">
-<p style="font-size:10px; font-style: italic; ">Image Reference 1</p>
+![https://www.geeksforgeeks.org/artificial-neural-networks-and-its-applications/](images/nn-img.png)
+
 
 # Overview
 
