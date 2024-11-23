@@ -27,7 +27,7 @@ The primary goals for this project were:
 # Design and Development Process
 The game was developed using HTML5 Canvas, which provides basic functionalities for drawing to pixel locations on a canvas. Since it was made without a game engine, the object inputs, collision, and game UI had to be handled manually. The order that the project was   
 1. **Research**:  
-   - Initial research involved watching thoroughly through 3Blue1Brown's series on deeplearning (see Ref3)
+   - Initial research involved watching thoroughly through 3Blue1Brown's series on deeplearning (![see Ref3](References))
    - For learning general code structuring and organization for this project I utilized a similar approach as Ref2
    - For implementing backpropogation I first followed derivations of Ref1. The most challengin gpart was converting those component=wise equations into matrix notation and then into numpy calculations. 
 2. **Troubleshooting**:  
@@ -71,8 +71,16 @@ This project wasn't about creating a repository to compete with frameworks like 
 <br>
 
 # References
+<ol>
+    <li><a href="https://brilliant.org/wiki/backpropagation/" target="_blank">Brilliant: Backpropagation</a></li>
+    <li><a href="https://pyimagesearch.com/2021/05/06/backpropagation-from-scratch-with-python/" target="_blank">PyImageSearch: Backpropagation from Scratch</a></li>
+    <li><a href="https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank">3Blue1Brown</a></li>
+    <li><a href="https://www.kaggle.com/code/hojjatk/read-mnist-dataset" target="_blank">Kaggle: MNIST Dataset</a></li>
+</ol>
 
-<li>(1) https://brilliant.org/wiki/backpropagation/</li>
-<li>(2) https://pyimagesearch.com/2021/05/06/backpropagation-from-scratch-with-python/</li>
-<li>(3) https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi</li>
-<li>(4) https://www.kaggle.com/code/hojjatk/read-mnist-dataset</li>
+
+## Images
+<ul>
+    <li><a href="https://www.geeksforgeeks.org/artificial-neural-networks-and-its-applications/" target="_blank">Feedforward NN Image</a></li>
+    <li><a href="https://www.researchgate.net/figure/ReLU-activation-function-vs-LeakyReLU-activation-function_fig2_358306930" target="_blank">ReLU vs Leaky ReLU Image</a></li>
+</ul>
