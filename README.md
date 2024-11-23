@@ -27,7 +27,7 @@ The primary goals for this project were:
 # Design and Development Process
 The game was developed using HTML5 Canvas, which provides basic functionalities for drawing to pixel locations on a canvas. Since it was made without a game engine, the object inputs, collision, and game UI had to be handled manually. The order that the project was   
 1. **Research**:  
-   - Initial research involved watching thoroughly through 3Blue1Brown's series on deeplearning (![see Ref3](#References))
+   - Initial research involved watching thoroughly through 3Blue1Brown's series on deeplearning (see Ref3)
    - For learning general code structuring and organization for this project I utilized a similar approach as Ref2
    - For implementing backpropogation I first followed derivations of Ref1. The most challengin gpart was converting those component=wise equations into matrix notation and then into numpy calculations. 
 2. **Troubleshooting**:  
@@ -49,19 +49,19 @@ This repository is not meant to compete with libraries such as PyTorch or Scikit
 1. **Download**: 
 - Download the repository with ```git clone https://github.com/briansheldon1/NeuralNetwork.git```
 2. **Creating Model**: 
-- The main Network() class can be found in 'src/network.py'. 
+- The main Network() class can be found in ![src/network.py](src/network.py) 
 - To create an instance of this class you should pass in 'layers', which is an array or tuple of layer sizes (including non-hidden layers)
 - For example, to build a model with 2 inputs, 1 output, and a single hidden layer of size 2 then I would instantiate my network with ```my_network = Network(layers=[2, 2, 1])```
 3. **Training Model**:
-- To see how models were trained see src/xor_main.py or src/mnist_main.py
-- To train the model first setup a np.array of inputs (X) and a np.array of outputs (y). You can use the train_test_split in src/util.py to divide the samples into training and testing samples
+- To see how models were trained see ![src/xor_main.py](src/xor_main.py) or ![src/mnist_main.py](src/mnist_main.py)
+- To train the model first setup a np.array of inputs (X) and a np.array of outputs (y). You can use the train_test_split in ![src/util.py](src/util.py) to divide the samples into training and testing samples
 - To train the model you can run ```Network.fit(X_train, y_train)```. It is recommended to also set the kwargs of epochs, batch_size and verbose
 4. **Saving/Loading Model**:
 - To save a model you can utilize the ```Network.save_model(save_path: string)``` method which saves the model parameters in a pkl file to the given path.
 - Similarly you can load a model using ```Network.load_model(load_path: string)```
 5. **Testing the Model**:
 - One option for testing the accuracy is ```Network.test_accuracy(X_test, y_test)``` which will output the percent of training examples the model got correct. This was used in the XOR testing
-- For the mnist dataset a confusion matrix was used (see plots/mnist_confmatrix.png) which was created using confusion_matrix_plot from ![src/util.py](src/util.py)
+- For the mnist dataset a confusion matrix was used (see ![plots/mnist_confmatrix.png](plots/mnist_confmatrix.png)) which was created using confusion_matrix_plot from ![src/util.py](src/util.py)
 
 
 # Reflection
