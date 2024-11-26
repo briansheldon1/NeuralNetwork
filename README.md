@@ -27,16 +27,15 @@ The primary goals for this project were:
 
 # Design and Development Process
 1. **Research**:  
-   - Initial research involved watching thoroughly through 3Blue1Brown's series on deeplearning (see Ref3)
-   - For learning general code structuring and organization for this project I utilized a similar approach as Ref2
-   - For implementing backpropogation I first followed derivations of Ref1. The most challenging part was converting those component-wise equations into linear algebra algorithms
+   - I first wanted to gain a deep conceptual understanding of how neural networks learn so I watched thoroughly through 3Blue1Brown's series on deeplearning (see Ref3). The videos were incredibly informative and I highly recommend them for anyone trying to learn about machine learning. 
+   - Next I looked at similar python projects to see how others generally structured and organized their code. I ended up going for a similar structure as Ref2 but with different handling of parameters and differing backpropogation formulations
+   - For implementing backpropogation I first followed derivations of Ref1 on paper. Then the most challenging part was converting component-wise equations into numpy algorithms for backpropogating through each layer
 2. **Troubleshooting**:  
-   - The majority of the time on the project was spent debugging and troubleshooting errors
-   - Some of the bugs included forgetting to add in bias during the feedforward, accidentally performing gradient ascent instead of descent, and forgetting to apply the activation function during the feedforward
-   - With the majority of bugs fixed the model was performing decently on basic tests but not superbly
+   - The majority of the time on the project was spent debugging and troubleshooting errors. Some of the bugs included forgetting to add in bias during the feedforward, accidentally performing gradient ascent (instead of descent), and forgetting to apply the activation function during the feedforward
+   - After fixing these bugs the model was performing decently but was easily outcompeted by simple sklearn models
 3. **Finetuning and Fixes**:  
-   - One of the most impactful improvements to the model was incorporating momentum. This adjustment made gradient descent less sensitive to local minima by having the descent behave more like a ball rolling downhill, smoothly landing in a deep minima
-   - By this point the model would achieve high accuracy in most cases but occasionally would perform terribly. By logging the gradients, I identified the issue was caused by vanishing gradients. Switching to a leaky ReLU activation function resolved this, as its neurons would never fully 'die' but only become less impactful
+   - One of the most impactful improvements to the model was incorporating momentum. This adjustment made gradient descent less sensitive to small local minima. The idea behind momentum is the gradient descent acts more like a ball rolling down a hill which smoothly escape small local minima and land into a deeper minima. 
+   - By this point the model would achieve high accuracy in most cases but occasionally would perform terribly. By logging the gradients, I identified the issue was caused by vanishing gradients. This can occur where a node outputs 0 and small changes in the nodes input have no effect which causes the node to no longer update with backpropogation. Switching to a leaky ReLU activation function resolved this, as its neurons would never fully 'die' but only become less impactful in negative regions
    <a href="https://www.researchgate.net/figure/ReLU-activation-function-vs-LeakyReLU-activation-function_fig2_358306930"><img src="images/relu.png"></a>
 4. **Model Tests**:  
    - **XOR TEST**: The first test I applied to a model was in solving the XOR problem. The XOR problem involves determing an output based on if two inputs are different (OR AND NAND). Linear models can't solve it because a single line can't separate the categories in the input space. Using a non-linear model with my custom Network class achieved 100% accuracy
